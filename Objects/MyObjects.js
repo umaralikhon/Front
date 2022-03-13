@@ -59,7 +59,7 @@ function makeUserinfo(name, age) {
 let user = makeUserinfo("Alisa", 23);
 console.log(user);
 
- 
+
 //Добавление свойства
 let userinfo5 = {
     name: "Siri"
@@ -100,18 +100,56 @@ console.log(userinfo6);
 
 
 //Добавление новых свойств при помощи Object.assign()
-Object.assign(userinfo6, {company: "Yandex"});
+Object.assign(userinfo6, { company: "Yandex" });
 console.log(userinfo6);
 
 
 //Проверка существование свойства
 
 //Проверка на существование объекта при помощи "?"
-if(userinfo6?.company) {
+if (userinfo6 ?.company) {
     console.log(userinfo6.company);
 }
 
 //Проверка на существование объекта при помощи оператора "in"
-if("country" in userinfo6.address){
+if ("country" in userinfo6.address) {
     console.log(userinfo6.address.country);
 }
+
+
+//Цикл for ... in
+for(let key in userinfo6){
+    //Доступ к ключам
+    console.log(key);
+
+    //Доступ к значениям
+    console.log(userinfo6[key]);
+}
+
+
+//Методы объекта
+let userinfo7 = {
+    name: "Siri",
+    age: 25,
+    showInfo(){
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    },
+}
+
+
+userinfo7.showInfo();
+
+
+//Фунция - конструктор
+/*
+    1 - Название функиции начинается с заглавной буквы.
+    2 - Вызов функции осуществляется при помощи ключ слова new
+*/
+
+function UserInfo8(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+console.log(new UserInfo8("Alisa", 25));
+console.log(new UqserInfo8("Diana", 20));
