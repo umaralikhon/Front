@@ -152,4 +152,4 @@ function UserInfo8(name, age){
 }
 
 console.log(new UserInfo8("Alisa", 25));
-console.log(new UqserInfo8("Diana", 20));
+console.log(new UserInfo8("Diana", 20));
