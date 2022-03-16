@@ -1,3 +1,7 @@
-.yellow{
-	font-color
+.yellow {
+    color: rgba(229, 110, 6, 0.87);
+}
+
+* {
+    background-color: #344d63;
 }
